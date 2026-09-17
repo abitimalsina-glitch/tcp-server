@@ -1,4 +1,4 @@
-# TCP Server in C
+# TCP Server
 
 A minimal **TCP server written from scratch in C** to understand how socket-based networking works at a low level.
 
@@ -98,13 +98,13 @@ nc -h
 Compile the server with:
 
 ```bash
-clang tcp_server.c -o tcp_server
+clang TCP-Server.c -o ./TCP-Server
 ```
 
 Then run it:
 
 ```bash
-./tcp_server
+./TCP-Server
 ```
 
 The server will listen on:
@@ -112,6 +112,7 @@ The server will listen on:
 ```text
 127.0.0.1:8080
 ```
+[!Running-The-Server](/images/Starting_Server.png)
 
 ## Testing
 
@@ -126,12 +127,16 @@ Type some data:
 ```text
 hello
 ```
+[!Sending_Req](/images/Sending_Request.png)
 
 The server receives the bytes sent by the client and responds with:
 
 ```text
-HELLO WORLD
+Hello Client
 ```
+
+[!Client](/images/Client_Side_Result.png)
+[!Server](/images/Server_Side_Result.png)
 
 This uses raw TCP data rather than HTTP, so tools such as `curl` are intentionally not required for testing.
 
